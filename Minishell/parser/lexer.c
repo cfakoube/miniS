@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lexer.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:42:20 by modembel          #+#    #+#             */
-/*   Updated: 2025/03/07 03:38:10 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:12:44 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ void	lexer_expander(t_token *token, char *line, t_data *data)
 	data->token = token;
 	var_expansion(data);
 	set_quote(token);
-	// printf("token - > %s\n", token->str);
 	quote_destroyer(token);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:34:35 by modembel          #+#    #+#             */
-/*   Updated: 2025/03/07 03:37:18 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:12:01 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ void	wait_child(t_data *data)
 				data->exit_code = 128 + WSTOPSIG(status);
 		}
 	}
-	// if (g_exit_codes == 128 + SIGINT)
-	//	ft_putstr_fd("\n", STDERR_FILENO);
 	if (g_exit_codes == 128 + SIGQUIT)
 		ft_putstr_fd("Quit (core dumped)\n", STDERR_FILENO);
 	g_exit_codes = data->exit_code;

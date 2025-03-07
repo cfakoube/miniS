@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:22:11 by modembel          #+#    #+#             */
-/*   Updated: 2025/03/07 03:37:05 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:18:49 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ char	**no_env(void)
 	arg[0] = ft_strjoin("PWD=", buff);
 	arg[1] = "SHLVL=1";
 	arg[2] = "_=/usr/bin/env";
-	arg[3] = "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";
+	arg[3] = ft_strjoin("PATH=/usr/local/sbin:/usr/local/",
+			"bin:/usr/sbin:/usr/bin:/sbin:/bin");
 	arg[4] = NULL;
 	return (arg);
 }

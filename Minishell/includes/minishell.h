@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:47:04 by modembel          #+#    #+#             */
-/*   Updated: 2025/03/07 03:46:25 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:24:04 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,11 @@ int								seconde_update_string(int *j, char *dest,
 void							clean_expansion(char *var, char *replace,
 									char *copy);
 int								env_size(char *str);
-// void							//special_case(char **str, char *copy,char *var);
+char							*copy_env(t_env *envi, char *var);
+char							*update_string(char *str, char *replace,
+									char *var, int index);
+char							*special_cases(char *copy, char *var,
+									int index);
 
 // quote
 bool							valide_dquote(char *str);

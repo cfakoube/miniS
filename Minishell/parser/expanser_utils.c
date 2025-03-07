@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expanser_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 07:34:54 by cfakoube          #+#    #+#             */
-/*   Updated: 2025/03/07 03:39:26 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:11:29 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,31 +80,15 @@ char	*var_isolation(char *str, int index)
 	return (var);
 }
 
-int	env_size(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] && str[i] != '=')
-		i++;
-	return (i);
-}
-
 bool	var_in_env(char *str, t_env *envi)
 {
 	t_env	*env;
 
-	// int        size;
 	env = envi;
-	// size = ft_strlen(str);
 	while (env)
 	{
-		// printf("env %s\n", env -> str);
 		if (env->str && ft_strncmp(env->str, str, env_size(env->str)) == 0)
-		{
-			// printf("%s\n", env -> str);
 			return (true);
-		}
 		env = env->next;
 	}
 	return (false);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expanser_utils2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfakoube <cfakoube@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 20:39:17 by modembel          #+#    #+#             */
-/*   Updated: 2025/03/03 07:16:38 by cfakoube         ###   ########.fr       */
+/*   Updated: 2025/03/07 22:11:44 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,15 @@ int	seconde_update_string(int *j, char *dest, char *replace, char *var)
 		(*j)++;
 	}
 	i = ft_strlen(var) + 1;
+	return (i);
+}
+
+int	env_size(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] && str[i] != '=')
+		i++;
 	return (i);
 }

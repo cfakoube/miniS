@@ -5,7 +5,7 @@ SRCS    = builtins/export_utils.c builtins/ft_cd.c builtins/ft_echo.c builtins/f
             builtins/ft_exit.c builtins/ft_export.c builtins/ft_pwd.c builtins/ft_unset.c \
             clean/exit_shell.c clean/free.c \
             execution/exec.c execution/exec2.c execution/path_cmd.c \
-            parser/expanser_utils.c parser/expanser_utils2.c parser/expanser.c \
+            parser/expanser_utils.c parser/expanser_utils2.c parser/expanser.c parser/expanser2.c \
             parser/lexer_utils.c parser/lexer.c parser/quote.c \
             redirection/command_utils.c redirection/command.c redirection/heredoc.c \
             signals/signal.c signals/signal2.c main.c
